@@ -1,0 +1,317 @@
+/* shadows into >> font-family: 'Shadows Into Light', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+/* dosis >> font-family: 'Dosis', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+/* open sans >> font-family: 'Open Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* Zen dots >> font-family: 'Zen Dots', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+/* indie flower >> font-family: 'Indie Flower', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Shadows Into Light', cursive; */
+  /* font-family: 'Dosis', sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Zen Dots', cursive; */
+  font-family: "Indie Flower", cursive;
+  /* font-weight: 500; */
+  overflow-x: hidden;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent !important;
+}
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  position: relative;
+}
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+  text-align: center;
+  font-size: 55px;
+}
+a{
+  color: white;
+  font-family: 'Dosis', sans-serif;
+}
+.span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* right: 10px; */
+  /* bottom: 10px; */
+  font-family: "Zen Dots", cursive;
+  font-size: 15px;
+}
+p {
+  font-size: 25px;
+  opacity: 0.3;
+}
+p:nth-child(1) {
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  transform: rotate(-20deg);
+}
+p:nth-child(2) {
+  position: absolute;
+  top: 230px;
+  right: 150px;
+  transform: rotate(10deg);
+}
+p:nth-child(3) {
+  position: absolute;
+  left: 500px;
+  bottom: 150px;
+  /* transform: rotate(-50deg); */
+}
+p:nth-child(4) {
+  position: absolute;
+  bottom: 200px;
+  right: 170px;
+  /* transform: rotate(-20deg); */
+}
+p:nth-child(5) {
+  position: absolute;
+  bottom: 270px;
+  left: 100px;
+  /* right: 100px; */
+  transform: rotate(-20deg);
+}
+.bgBrand {
+  width: 450px;
+  position: absolute;
+  opacity: 0.2;
+}
+.codial {
+  top: 100px;
+  left: 530px;
+}
+.one,
+.three,
+.five,
+.seven {
+  background-color: black;
+  color: white;
+}
+.two,
+.four,
+.six {
+  background-color: white;
+  color: black;
+}
+
+
+.bgStyling{
+  /* background-color > orqa fon rangini o'zgartirish uchun ishlatiladi */
+  background-color: #000;
+
+  /* background-image > orqa fonga rasm qo'yish uchun ishlatiladi yoki Gradient color berish uchun */
+  background-image:url(../image/.wonder) linear-gradient(90deg, white,red,blue);
+
+  /* background-size > orqa fon o'lchamini o'zgartirish > cover > contain -- turlarixam bor*/
+  background-size: 100px;
+
+  /* background-repeat > orqa fon o'lchami kichik bo'lsa takrorlanishini boshqarish uchun ishlatiladi */
+  background-repeat:no-repeat ;
+  
+  /* background-attachment >  */
+  /* background-attachment: ;
+  background-position: ; */
+}
+
+/* animation with cursor */
+
+.cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+}
+
+.cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color:  #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.05s;
+}
+
+
+
+/* hover animation */
+
+/* first page */
+.one h1 {
+  position: relative;
+}
+.one h1::before {
+  position: absolute;
+  content: attr(data-text);
+  color: aqua;
+  width: 70%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-right: 1px solid aqua;
+  overflow: hidden;
+  animation: title-anime 6s infinite;
+}
+
+@keyframes title-anime {
+  0%, 10%,100% {
+    width: 0%;
+  }70%, 90% {
+    width: 100%;
+  }
+}
+
+/* second page */
+.two {
+  color: hsl(0, 0%, 30%);
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 30%) 0,
+    hsl(0, 0%, 100%) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 1600px;
+  }
+  100% {
+    background-position: 1600px;
+  }
+}
+
+/* five page */
+.five h1 {
+  border-right: 2px solid hsl(0, 0%, 80%);
+  letter-spacing: 4px;
+  white-space: nowrap;
+  transition-delay: 3s;
+  overflow: hidden;
+  animation: typewritter 7s steps(42) infinite, blinkTextCursor 0.5s infinite;
+}
+
+@keyframes typewritter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1200px;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* thirth page */
+.three h1 {
+  color: transparent;
+  background: url(https://cdn.xxl.thumbs.canstockphoto.com/collage-of-multi-ethnic-people-with-various-profession-collage-of-happy-multi-ethnic-people-with-pictures_csp36861383.jpg);
+  font-size: 4vw;
+  font-weight: bold;
+  background-size: 40%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  animation: zoomout 10s ease 0.5s infinite}
+
+@keyframes zoomout {
+  0%, 100% {
+    background-size: 40%;
+  }
+  50% {
+    background-size: 10%;
+  }
+}
+
+/* four page */
+.four h1 span {
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.hover-text:hover span:nth-child(1) {
+  color: black;
+  text-shadow: 0 0 10px black,
+               /* 0 0 20px black, */
+               /* 0 0 40px black, */
+               /* 0 0 80px black, */
+               0 0 120px black,
+               0 0 160px black;
+  margin-right: 60px;
+  letter-spacing: 15px;
+}
+
+.hover-text:hover span:nth-child(1)::after {
+  content: "ni";
+}
+
+.hover-text:hover span:last-child {
+  color: black;
+  letter-spacing: 15px;
+  text-shadow: 0 0 10px black,
+               /* 0 0 20px black, */
+               /* 0 0 40px black, */
+               /* 0 0 80px black, */
+               0 0 120px black,
+               0 0 160px black;
+}
+
+.mitti-text {
+  font-size: medium;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  top: 60px;
+  animation: mitti 1.5s infinite;
+}
+
+@keyframes mitti {
+  0%, 10%, 30%, 40%, 50%, 70% {
+    bottom: 30px;
+  }
+  70% {
+    top: 0;
+  }
+}
